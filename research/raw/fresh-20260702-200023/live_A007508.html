@@ -1,0 +1,514 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+  
+  <head>
+  <link rel="stylesheet" href="/styles.css">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="OEIS,integer sequences,Sloane" />
+  
+  
+  <title>A007508 - OEIS</title>
+  <link rel="search" type="application/opensearchdescription+xml" title="OEIS" href="/oeis.xml">
+  <script>
+  var myURL = "\/A007508"
+  function redir() {
+      var host = document.location.hostname;
+      if(host != "oeis.org" && host != "127.0.0.1" && !/^([0-9.]+)$/.test(host) && host != "localhost" && host != "localhost.localdomain") {
+          document.location = "https"+":"+"//"+"oeis"+".org/" + myURL;
+      }
+  }
+  function sf() {
+      if(document.location.pathname == "/" && document.f) document.f.q.focus();
+  }
+  </script>
+  </head>
+  <body bgcolor=#ffffff onload="redir();sf()"><a href="https://oeis.org/cdn-cgi/content?id=LElIIR37krrZ8DOLB_gDo7jTB4Wmyf_5m9KIckuqXpk-1782993626.9286766-1.2.1.1-NJktj52teMpi_QqpkZV.J1pHkC43P6p9Mrewrulmg3I" aria-hidden="true" rel="nofollow noopener" style="display: none !important; visibility: hidden !important"></a>
+    <div class=loginbar>
+      <div class=login>
+      
+        <a href="/login?redirect=%2fA007508">login</a>
+      
+      </div>
+    </div>
+
+    <div class=center><div class=top>
+    <center>
+    <div class=donors>
+    The OEIS is supported by <a href="http://oeisf.org/#DONATE">the many generous donors to the OEIS Foundation</a>.
+    </div>
+
+    <div class=banner>
+    <a href="/"><img class=banner border="0" width="600" src="/banner2021.jpg" alt="A007508 - OEIS"></a>
+    </div>
+
+    
+    </center>
+    </div></div>
+
+    <div class=center><div class=pagebody>
+      
+    
+    <div class=searchbarcenter>
+        <form name=f action="/search" method="GET">
+            <div class=searchbargreet>
+                <div class=searchbar>
+                    <div class=searchq>
+                        <input class=searchbox maxLength=1024 name=q value="" title="Search Query">
+                        
+                        
+                        
+                        
+                    </div>
+                    <div class=searchsubmit>
+                        <input type=submit value="Search" name=go>
+                    </div>
+                    <div class=hints>
+                        <span class=hints><a href="/hints.html">Hints</a></span>
+                    </div>
+                </div>
+                <div class=searchgreet>
+                    (Greetings from <a href="/welcome">The On-Line Encyclopedia of Integer Sequences</a>!)
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class=sequence>
+        <div class=space1></div>
+        <div class=line></div>
+        
+        <div class=seqhead>
+            <div class=seqnumname>
+                <div class=seqnum>
+                    
+                        A007508
+                    
+                </div>
+                <div class=seqname>
+                    Number of twin prime pairs below 10^n.
+                    <br><font size=-1>(Formerly M1855)</font>
+                </div>
+            </div>
+            <div class=scorerefs>
+                        
+                        56
+            </div>
+        </div>
+        
+            
+    
+    
+    <div>
+        <div class=seqdatabox>
+            <div class=seqdata>2, 8, 35, 205, 1224, 8169, 58980, 440312, 3424506, 27412679, 224376048, 1870585220, 15834664872, 135780321665, 1177209242304, 10304195697298, 90948839353159, 808675888577436, 7237516880334496</div>
+            
+                <div class=seqdatalinks>
+                (<a href="/A007508/list">list</a>;
+                
+                
+                
+                    <a href="/A007508/graph">graph</a>;
+                
+                <a href="/search?q=A007508+-id:A007508">refs</a>;
+                <a href="/A007508/listen">listen</a>;
+                <a href="/history?seq=A007508">history</a>;
+                
+                <a href="/search?q=id:A007508&fmt=text">text</a>;
+                <a href="/A007508/internal">internal format</a>)
+                </div>
+            
+        </div>
+    </div>
+    <div class=entry>
+        
+            
+        
+            
+        
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>OFFSET</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>1,1</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>COMMENTS</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>&quot;At the present time (2001), Thomas Nicely has reached pi_2(3*10^15) and his value is confirmed by Pascal Sebah who made a new computation from scratch and up to pi_2(5*10^15) [ = 5357875276068] with an independent implementation.&quot;</div>
+                             
+                                 <div class=sectline>Though the first paper contributed by D. A. Goldston was reported to be flawed, the more recent one (with other coauthors) maintains and substantiates the result. - <a href="/wiki/User:Lekraj_Beedassy">Lekraj Beedassy</a>, Aug 19 2005</div>
+                             
+                                 <div class=sectline>Theorem. While g is even, g &gt; 0, number of primes p &lt; x (x is an integer) such that p' = p + g is also prime, could be written as qpg(x) = qcc(x) - (x - pi(x) - pi(x + g) + 1) where qcc(x) is the number of &quot;common composite numbers&quot; c &lt;= x such that c and c' = c + g both are composite (see Example below; I propose it here as a theorem only not to repeat for so-called &quot;cousin&quot;-primes (p; p+4), &quot;sexy&quot;-primes (p; p+6), etc.). - <a href="/wiki/User:Sergey_Pavlov">Sergey Pavlov</a>, Apr 08 2021</div>
+                             
+                                 <div class=sectline>A comparison of the counts against the numbers predicted by the Hardy-Littlewood conjecture (<a href="/A152051" title="Hardy-Littlewood approximation to the number of twin primes less than 10^n.">A152051</a>), using the fit by Wolf(2011), shows a significant irregularity for the last term a(19). See Pfoertner link for an illustration. An independent verification of a(19) is required. Until this is available, a(19) must be considered potentially erroneous. - <a href="/wiki/User:Hugo_Pfoertner">Hugo Pfoertner</a>, Jun 17 2026</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>REFERENCES</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>Paulo Ribenboim, The Book of Prime Number Records. Springer-Verlag, NY, 2nd ed., 1989, p. 202.</div>
+                             
+                                 <div class=sectline>Paulo Ribenboim, The Little Book of Bigger Primes, Springer-Verlag NY 2004. See p. 195.</div>
+                             
+                                 <div class=sectline>N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995 (includes this sequence).</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                     
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>LINKS</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline><a href="/A007508/b007508.txt">Table of n, a(n) for n=1..19.</a></div>
+                             
+                                 <div class=sectline>Richard P. Brent, <a href="https://doi.org/10.1090/S0025-5718-1975-0369287-1">Irregularities in the distribution of primes and twin primes</a>, Math. Comp. 29 (1975), 43-56.</div>
+                             
+                                 <div class=sectline>Chris K. Caldwell, <a href="https://arxiv.org/abs/2103.04483">An Amazing Prime Heuristic</a>, arXiv:2103.04483 [math.HO], 2021. See Table 1.</div>
+                             
+                                 <div class=sectline>Chris K. Caldwell, The Prime Glossary, <a href="https://t5k.org/glossary/page.php?sort=TwinPrimeConjecture">Twin prime conjecture</a>.</div>
+                             
+                                 <div class=sectline>Tsz Ho Chan, <a href="https://arxiv.org/abs/math/0503441">A note on Primes in Short Intervals</a>, arXiv:math/0503441 [math.NT], 2005.</div>
+                             
+                                 <div class=sectline>P. Erdős, <a href="https://doi.org/10.1307/mmj/1028997963">Some Unsolved Problems</a>, Michigan Math. J., Volume 4, Issue 3 (1957), 291-300.</div>
+                             
+                                 <div class=sectline>G. H. Gadiyar and R. Padma, <a href="https://arxiv.org/abs/hep-th/9806061">Renormalisation and the density of prime pairs</a>, arXiv:hep-th/9806061, 1998.</div>
+                             
+                                 <div class=sectline>G. H. Gadiyar and R. Padma, <a href="https://empslocal.ex.ac.uk/people/staff/mrwatkin/zeta/padma.pdf">Ramanujan-Fourier series, the Wiener-Khintchine formula and the distribution of prime pairs</a>, Physica A 269 (1999) 503-510.</div>
+                             
+                                 <div class=sectline>D. A. Goldston, J. Pintz, and C. Y. Yildirim, <a href="https://arxiv.org/abs/math/0508185">Primes in Tuples, I</a>, arXiv:math/0508185 [math.NT], 2005.</div>
+                             
+                                 <div class=sectline>D. A. Goldston, J. Pintz, and C. Y. Yildirim, <a href="http://www.math.sjsu.edu/~goldston/gpy02-08-05.pdf">Small Gaps Between Primes, II</a></div>
+                             
+                                 <div class=sectline>D. A. Goldston, J. Pintz, and C. Y. Yildirim, <a href="https://arxiv.org/abs/math/0512436">The Path to Recent Progress on Small Gaps Between Primes</a>, arXiv:math/0512436 [math.NT], 2005-2006.</div>
+                             
+                                 <div class=sectline>D. A. Goldston and C. Y. Yildirim, <a href="https://arxiv.org/abs/math/0504336">Small Gaps Between Primes, I</a>, arXiv:math/0504336 [math.NT], 2005.</div>
+                             
+                                 <div class=sectline>D. A. Goldston and C. Yildirim, <a href="https://web.archive.org/web/20080309063536/http://aimath.org/primegaps/goldston_tech/">Small gaps between consecutive primes</a>.</div>
+                             
+                                 <div class=sectline>D. A. Goldston et al., <a href="https://arxiv.org/abs/math/0506067">Small gaps between primes or almost primes</a>, arXiv:math/0506067 [math.NT], 2005.</div>
+                             
+                                 <div class=sectline>D. A. Goldston et al., <a href="https://arxiv.org/abs/math/0505300">Small Gaps between Primes Exist</a>, arXiv:math/0505300 [math.NT], 2005.</div>
+                             
+                                 <div class=sectline>Xavier Gourdon and Pascal Sebah, <a href="http://numbers.computation.free.fr/Constants/Primes/twin.html">Introduction to Twin Primes and Brun's Constant</a>.</div>
+                             
+                                 <div class=sectline>A. Granville and K. Soundararajan, <a href="https://web.archive.org/web/20110724230750/http://aimath.org/primegaps/residueerror/">On the error in Goldston and Yildirim's &quot;Small gaps between consecutive primes&quot;</a>.</div>
+                             
+                                 <div class=sectline>Gareth A. Jones and Alexander K. Zvonkin, <a href="https://arxiv.org/abs/2104.12015">Klein's ten planar dessins of degree 11, and beyond</a>, arXiv:2104.12015 [math.GR], 2021-2022. See p. 24.</div>
+                             
+                                 <div class=sectline>P. F. Kelly and Terry Pilling, <a href="https://arxiv.org/abs/math/0103191">Characterization of the Distribution of Twin Primes</a>, arXiv:math/0103191 [math.NT], 2001.</div>
+                             
+                                 <div class=sectline>P. F. Kelly and Terry Pilling, <a href="https://arxiv.org/abs/math/0104205">Implications of a New Characterization of the Distribution of Twin Primes</a>, arXiv:math/0104205 [math.NT], 2001.</div>
+                             
+                                 <div class=sectline>P. F. Kelly and Terry Pilling, <a href="https://arxiv.org/abs/math/0106223">Discrete Reanalysis of a New Model of the Distribution of Twin Primes</a>, arXiv:math/0106223 [math.NT], 2001.</div>
+                             
+                                 <div class=sectline>James Maynard, <a href="https://arxiv.org/abs/1910.14674">On the Twin Prime Conjecture</a>, arXiv:1910.14674 [math.NT], 2019, p. 2.</div>
+                             
+                                 <div class=sectline>Thomas R. Nicely, <a href="https://faculty.lynchburg.edu/~nicely/gaps/gaplist.html">First occurrence prime gaps</a> [For local copy see <a href="/A000101" title="Record gaps between primes (upper end) (compare A002386, which gives lower ends of these gaps).">A000101</a>]</div>
+                             
+                                 <div class=sectline>Thomas R. Nicely, <a href="https://faculty.lynchburg.edu/~nicely/twins/twins.html">Enumeration to 10^14 of the twin primes and Brun's constant</a>, Virginia Journal of Science, 46:3 (Fall, 1995), 195-204.</div>
+                             
+                                 <div class=sectline>Thomas R. Nicely, <a href="/A001359/a001359.pdf">Enumeration to 10^14 of the twin primes and Brun's constant</a> [Local copy, pdf only]</div>
+                             
+                                 <div class=sectline>Nova Science, <a href="http://www.pbs.org/wgbh/nova/sciencenow/3302/02.html">Twin Prime Conjecture</a></div>
+                             
+                                 <div class=sectline>Tomás Oliveira e Silva, <a href="http://sweet.ua.pt/tos/primes.html">Tables of values of pi(x) and of pi2(x)</a> [From <a href="/wiki/User:M._F._Hasler">M. F. Hasler</a>, Dec 18 2008]</div>
+                             
+                                 <div class=sectline>Hugo Pfoertner, <a href="/A007508/a007508.png">Comparison of counts against Hardy-Littlewood prediction</a>, (2026).</div>
+                             
+                                 <div class=sectline>J. Richstein, <a href="https://web.archive.org/web/20040911002922/http://www.informatik.uni-giessen.de/staff/richstein/res/tp-en.html">Computing the number of twin primes up to 10^14</a>.</div>
+                             
+                                 <div class=sectline>J. Richstein, <a href="https://web.archive.org/web/20070711220924/http://www.mscs.dal.ca/~joerg/res/tp-en.html">Computing the number of twin primes up to 10^14</a>.</div>
+                             
+                                 <div class=sectline>Jonathan Sondow, J. W. Nicholson, and T. D. Noe, <a href="https://arxiv.org/abs/1105.2249">Ramanujan Primes: Bounds, Runs, Twins, and Gaps</a>, arXiv:1105.2249 [math.NT], 2011; J. Integer Seq. 14 (2011) Article 11.6.2.</div>
+                             
+                                 <div class=sectline>Jonathan P. Sorenson and Jonathan Webster, <a href="https://arxiv.org/abs/1807.08777">Two Algorithms to Find Primes in Patterns</a>, arXiv:1807.08777 [math.NT], 2018-2019.</div>
+                             
+                                 <div class=sectline>K. Soundararajan, <a href="https://arxiv.org/abs/math/0606408">The distribution of prime numbers</a>, arXiv:math/0606408 [math.NT], 2006.</div>
+                             
+                                 <div class=sectline>K. Soundararajan, <a href="https://arxiv.org/abs/math/0605696">Small gaps between prime numbers: The work of Goldston-Pintz-Yildirim</a>, arXiv:math/0605696 [math.NT], 2006.</div>
+                             
+                                 <div class=sectline>K. Soundararajan, <a href="https://doi.org/10.1090/S0273-0979-06-01142-6">Small gaps between prime numbers: The work of Goldston-Pintz-Yildirim</a>, Bull. Amer. Math. Soc. 44 (2007), 1-18.</div>
+                             
+                                 <div class=sectline>Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/TwinPrimes.html">Twin Primes</a>.</div>
+                             
+                                 <div class=sectline>Marek Wolf, <a href="https://arxiv.org/abs/math/0105211">Some Remarks on the Distribution of twin Primes</a>, arXiv:math/0105211 [math.NT], 2001.</div>
+                             
+                                 <div class=sectline>Marek Wolf, <a href="https://arxiv.org/abs/1107.2809">The Skewes number for twin primes: counting sign changes of pi_2(x)-C_2*Li_2(x)</a>, arXiv:1107.2809 [math.NT], 2011.</div>
+                             
+                                 <div class=sectline>C. Yildirim and D. Goldston, <a href="http://www.math.boun.edu.tr/instructors/yildirim/yildirimtech.htm">Small gaps between consecutive primes</a>.</div>
+                             
+                                 <div class=sectline><a href="/index/Pri#primepop">Index entries for sequences related to numbers of primes in various ranges</a></div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>FORMULA</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>Partial sums of <a href="/A070076" title="Number of n-digit twin prime pairs.">A070076</a>(n). - <a href="/wiki/User:Lekraj_Beedassy">Lekraj Beedassy</a>, Jun 11 2004</div>
+                             
+                                 <div class=sectline>For 1 &lt; n &lt; 19, a(n) ~ e * pi(10^n) / (5*n - 5) = e * <a href="/A006880" title="Number of primes &lt; 10^n.">A006880</a>(n) / (5*n - 5) where e is Napier's constant, see <a href="/A001113" title="Decimal expansion of e.">A001113</a> (probably, so is for any n &gt; 18; we use n &gt; 1 to avoid division by zero). - <a href="/wiki/User:Sergey_Pavlov">Sergey Pavlov</a>, Apr 07 2021</div>
+                             
+                                 <div class=sectline>For any n, a(n) = qcc(x) - (10^n - pi(10^n) - pi(10^n + 2) + 1) where qcc(x) is the number of &quot;common composite numbers&quot; c &lt;= 10^n such that c and c' = c + 2 both are composite (trivial). - <a href="/wiki/User:Sergey_Pavlov">Sergey Pavlov</a>, Apr 08 2021</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>EXAMPLE</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>For x = 10, qcc(x) = 4 (since 2 is prime; 4, 6, 8, 10 are even, and no odd 0 &lt; d &lt; 25 such that both d and d' = d + 2 are composite), pi(10) = 4, pi(10 + 2) = 5, but, while v = 2+2 or v = 2-2 would be even, we must add 1; hence, a(1) = qcc(10^1) - (10^1 - pi(10^1) - pi(10^1 + 2) + 1) = 4 - (10 - 4 - 5 + 1) = 2 (trivial). - <a href="/wiki/User:Sergey_Pavlov">Sergey Pavlov</a>, Apr 08 2021</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>MATHEMATICA</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>ile = 2; Do[Do[If[(PrimeQ[2 n - 1]) &amp;&amp; (PrimeQ[2 n + 1]), ile = ile + 1], {n, 5*10^m, 5*10^(m + 1)}]; Print[{m, ile}], {m, 0, 7}] (* <a href="/wiki/User:Artur_Jasinski">Artur Jasinski</a>, Oct 24 2011 *)</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>PROG</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>(PARI) a(n)=my(s, p=2); forprime(q=3, 10^n, if(q-p==2, s++); p=q); s \\ <a href="/wiki/User:Charles_R_Greathouse_IV">Charles R Greathouse IV</a>, Mar 21 2013</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                     
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>CROSSREFS</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>Cf. <a href="/A001097" title="Twin primes.">A001097</a>.</div>
+                             
+                                 <div class=sectline>Cf. <a href="/A173081" title="Number of twin prime pairs &lt; 10^n that contain at least one Ramanujan prime (A104272).">A173081</a> and <a href="/A181678" title="Number of twin Ramanujan prime pairs less than 10^n.">A181678</a> (number of twin Ramanujan prime pairs below 10^n).</div>
+                             
+                                 <div class=sectline>Cf. <a href="/A152051" title="Hardy-Littlewood approximation to the number of twin primes less than 10^n.">A152051</a>, <a href="/A347278" title="First member p(m) of the m-th twin prime pair such that d(m) &gt; 0 and d(m-1) &lt; 0, with d(k) = k/Integral_{x=2..p(k)} 1/log(x)...">A347278</a>, <a href="/A347279" title="First member p(m) of the m-th twin prime pair such that d(m) &lt; 0 and d(m-1) &gt; 0, with d(k) = k/Integral_{x=2..p(k)} 1/log(x)...">A347279</a>.</div>
+                             
+                                 <div class=sectline>Sequence in context: <a href="/A213227" title="G.f. satisfies: A(x) = 1/(1 - x/A(-x*A(x)^6)).">A213227</a> <a href="/A020009" title="Nearest integer to Gamma(n + 6/11)/Gamma(6/11).">A020009</a> <a href="/A257555" title="Number of distinct ways to dissect a cube into n rectangular boxes of equal volume, up to reflection and rotation.">A257555</a> * <a href="/A122674" title="Number of trees with n nodes generated from the simple cubic lattice.">A122674</a> <a href="/A203762" title="a(n)=f(a(n-1),a(n-2)+1,a(n-3)), where f(x,y,z)=yz+zx+xy and (a(1),a(2),a(3))=(0,0,1).">A203762</a> <a href="/A185635" title="Fixed points of A075075.">A185635</a></div>
+                             
+                                 <div class=sectline>Adjacent sequences:  <a href="/A007505" title="Primes of form 3*2^k - 1.">A007505</a> <a href="/A007506" title="Primes p with property that p divides the sum of all primes &lt;= p.">A007506</a> <a href="/A007507" title="Decimal expansion of 2^sqrt(2).">A007507</a> * <a href="/A007509" title="Numerator of Sum_{k=0..n} (-1)^k/(2*k+1).">A007509</a> <a href="/A007510" title="Single (or isolated or non-twin) primes: Primes p such that neither p-2 nor p+2 is prime.">A007510</a> <a href="/A007511" title="a(n) is the smallest number greater than a(n-1) that is expressible as the sum of two squares in more ways than a(n-1).">A007511</a></div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>KEYWORD</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline><span title="a sequence of nonnegative numbers">nonn</span>,<span title="an exceptionally nice sequence">nice</span>,<span title="next term not known, may be hard to find.  please extend this sequence">hard</span>,<span title="more terms are needed! please extend this sequence">more</span></div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>AUTHOR</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline><a href="/wiki/User:N._J._A._Sloane">N. J. A. Sloane</a>, <a href="/wiki/User:Robert_G._Wilson_v">Robert G. Wilson v</a></div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>EXTENSIONS</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>pi2(10^15) due to Nicely and Szymanski, contributed by <a href="/wiki/User:Eric_W._Weisstein">Eric W. Weisstein</a></div>
+                             
+                                 <div class=sectline>pi2(10^16) due to Pascal Sebah, contributed by <a href="/wiki/User:Robert_G._Wilson_v">Robert G. Wilson v</a>, Aug 22 2002</div>
+                             
+                                 <div class=sectline>Added a(17)-a(18) computed by Tomás Oliveira e Silva and link to his web site. - <a href="/wiki/User:M._F._Hasler">M. F. Hasler</a>, Dec 18 2008</div>
+                             
+                                 <div class=sectline>Definition corrected by <a href="/wiki/User:Max_Alekseyev">Max Alekseyev</a>, Oct 25 2010</div>
+                             
+                                 <div class=sectline>a(16) corrected by <a href="/wiki/User:Dana_Jacobsen">Dana Jacobsen</a>, Mar 28 2014</div>
+                             
+                                 <div class=sectline>a(19) from <a href="/wiki/User:Benjamin_Chaffin">Benjamin Chaffin</a>, Jun 02 2026</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>STATUS</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>approved</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+
+        
+    </div>
+
+        
+        <div class=space10></div>
+    </div>
+
+    </div></div>
+
+    <p>
+
+    <div class=footerpad></div>
+    <div class=footer>
+    <center>
+    <div class=bottom>
+    <div class=linksbar>
+      <a href="/">Lookup</a>
+      <a href="/wiki/Welcome"><font color="red">Welcome</font></a>
+      <a href="/wiki/Main_Page"><font color="red">Wiki</font></a>
+      <a href="/wiki/Special:RequestAccount">Register</a>
+      
+      <a href="/play.html">Music</a>
+      <a href="/plot2.html">Plot 2</a>
+      <a href="/demo1.html">Demos</a>
+      <a href="/wiki/Index_to_OEIS">Index</a>
+      <a href="/webcam">WebCam</a>
+      <a href="/Submit.html">Contribute</a>
+      <a href="/eishelp2.html">Format</a>
+      <a href="/wiki/Style_Sheet">Style Sheet</a>
+      <a href="/transforms.html">Transforms</a>
+      <a href="/ol.html">Superseeker</a>
+      <a href="/recent">Recents</a>
+    </div>
+    <div class=linksbar>
+      <a href="/community.html">The OEIS Community</a>
+    </div>
+    <div class=linksbar>
+      Maintained by <a href="http://oeisf.org">The OEIS Foundation Inc.</a>
+    </div>
+
+    <div class=dbinfo>Last modified July  2 07:52 EDT 2026.  Contains 397104 sequences.</div>
+    <div class=legal>
+    <a href="/wiki/Legal_Documents">License Agreements, Terms of Use, Privacy Policy</a>
+    </div>
+
+    </div>
+    </center>
+    </div>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"781e3e2683624a28a850394a171c1b83","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a14d7d784c043cf1',t:'MTc4Mjk5MzYyNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
