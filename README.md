@@ -23,6 +23,10 @@ python scripts/frontier_check.py
 
 All calibration uses n ≤ 18 only; the disputed a(19) values are held out. Data provenance: the OEIS A007508 page was fetched on 2026-07-02, and the raw HTML/text responses (with HTTP headers for the curl fetch and SHA256 checksums) are preserved in `research/raw/`, together with revision-history snapshots for A007508 and A080840; the A080840 terms used by the scripts were transcribed from oeis.org. A windowed spot check uses the [primesieve](https://github.com/kimwalisch/primesieve) 12.14 command-line binary (not bundled): the twin pair count over [10¹⁹ − 10⁹, 10¹⁹] is 690,217, against a Hardy–Littlewood expectation of ≈689,800 — reproducible by anyone with the primesieve CLI.
 
+## Release
+
+The verification protocol behind this analysis is released as a standalone package: **[dsm-protocol](https://github.com/Naidan03/dsm-protocol)** — a lightweight statistical triage layer for numeric claims (precision-weighted D/S/M fusion, prospective sigma-scale innovation tests, instrument validation gates), with the full evidence package for the a(19) analysis and an LLM release-monitoring example.
+
 ## Repository map
 
 - `scripts/` — all analysis code
