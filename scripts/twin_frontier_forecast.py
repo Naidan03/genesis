@@ -1,13 +1,13 @@
 """
 Frozen forecast for A007508(19) and A007508(20), and verdict on the disputed a(19).
 
-Stages: validation gates -> calibration (n <= 18 only) -> forecast registration -> verdict.
+Stages: validation gates -> calibration (n <= 18 only) -> forecast -> verdict.
 Recipe (fixed before any comparison):
   P1 = HL(x)*(1 + b_hat), b_hat = b_18 * gamma, gamma = median(b_{n+1}/b_n, n = 14..17)
   P2 = a_18 * HL(x)/HL(1e18)
   x_hat = (P1+P2)/2; sigma = sqrt(sigma_spread^2 + sigma_fluct^2),
   sigma_spread = |P1-P2|/2; sigma_fluct = RMS(w_n, n = 13..18)*sqrt(HL(x)), w_n = delta_n/sqrt(HL)
-  90% range = x_hat +/- 1.645*sigma; failure criterion: an independently verified value outside 3 sigma.
+  90% range = x_hat +/- 1.645*sigma; a conflict is called only if an independently verified value falls outside 3 sigma.
 The a(19) term added 2026-06-02 is HELD OUT of all calibration. Requires: mpmath.
 """
 import json
@@ -45,7 +45,7 @@ A007508 = {1: 2, 2: 8, 3: 35, 4: 205, 5: 1224, 6: 8169, 7: 58980, 8: 440312,
            13: 15834664872, 14: 135780321665, 15: 1177209242304,
            16: 10304195697298, 17: 90948839353159, 18: 808675888577436}
 A19_DISPUTED = 7237516880334496  # added 2026-06-02 -- HELD OUT of calibration
-SIEVE_CHECK = {9: 3424506, 10: 27412679, 11: 224376048, 12: 1870585220}  # independent sieve counts
+SIEVE_CHECK = {9: 3424506, 10: 27412679, 11: 224376048, 12: 1870585220}  # counts from a separate sieve run (not reproduced in this repo)
 
 out = {}
 
@@ -86,7 +86,7 @@ rms_w = math.sqrt(sum(v*v for v in ws)/len(ws))
 out["calibration"] = {"w_13_18": ws, "mean_w": statistics.mean(ws), "std_w": statistics.pstdev(ws),
                       "rms_w": rms_w, "gamma_decade": gamma, "ratios_14_17": ratios}
 
-# ---------- STAGE 3: REGISTER FORECASTS (frozen from n<=18) ----------
+# ---------- STAGE 3: FORECASTS (frozen from n<=18) ----------
 def forecast(n_target, b18, a18):
     x = mpf(10)**n_target
     S = HL(x)

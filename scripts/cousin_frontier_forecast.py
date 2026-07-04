@@ -4,7 +4,7 @@ and verdict on the a(19) term added 2026-06-02.
 
 Recipe identical to twin_frontier_forecast.py, applied to A080840 with a(19) HELD OUT.
 Additional gate: an independent numpy sieve must reproduce a(8) and a(9) exactly
-(the n = 8 run doubles as a timing pilot for n = 9; ~1 GB RAM for the 1e9 sieve).
+(the n = 8 run also gives a runtime estimate for n = 9; ~1 GB RAM for the 1e9 sieve).
 The Hardy-Littlewood singular series for the d = 4 pair family equals that of twins (2*C2).
 Requires: mpmath, numpy.
 """
@@ -21,7 +21,8 @@ def Li2(x):
 def HL(x):
     return 2*C2*Li2(x)
 
-# --- data: OEIS A080840 (fetched 2026-07-02; raw copies in research/raw/) ---
+# --- data: OEIS A080840 (values as of 2026-07-02, transcribed from oeis.org;
+# a revision-history snapshot is preserved in research/raw/) ---
 A080840 = {1: 1, 2: 8, 3: 41, 4: 203, 5: 1216, 6: 8144, 7: 58622, 8: 440258,
            9: 3424680, 10: 27409999, 11: 224373161, 12: 1870585459,
            13: 15834656003, 14: 135779962760, 15: 1177207270204,
@@ -45,7 +46,7 @@ t0 = time.time()
 c8 = cousin_count_upper_below(10**8)
 t8 = time.time() - t0
 gate["n8"] = {"own": c8, "oeis": A080840[8], "match": c8 == A080840[8], "time_s": round(t8, 2)}
-budget_ok = t8 * 12 < 300  # timing pilot: n=9 ~ 10x n=8 + overhead, must fit 5 min
+budget_ok = t8 * 12 < 300  # skip n=9 if the n=8 timing suggests it would exceed ~5 min (n=9 ~ 10x n=8 + overhead)
 gate["timing_pilot_n9_budget_ok"] = budget_ok
 if gate["n8"]["match"] and budget_ok:
     t0 = time.time()
@@ -74,7 +75,7 @@ rms_w = math.sqrt(sum(v*v for v in ws)/len(ws))
 out["calibration"] = {"w_13_18": ws, "rms_w": rms_w, "gamma_decade": gamma,
                       "w_range_all_n": [min(r["w"] for r in tbl), max(r["w"] for r in tbl)]}
 
-# ---------- REGISTER FORECAST (frozen from n<=18) ----------
+# ---------- FORECAST (frozen from n<=18) ----------
 x = mpf(10)**19
 S = HL(x)
 b_hat = b[18] * mpf(gamma)

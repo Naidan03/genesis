@@ -1,7 +1,7 @@
 """Independent cross-check of A007508/A080840 residuals against 2*C2*Li2(10^n) via Simpson quadrature."""
 import numpy as np, json
 C2=0.6601618158468696; K=2*C2
-# OEIS values (fetched 2026-07-02; raw copies in research/raw/):
+# OEIS values as of 2026-07-02 (raw A007508 responses preserved in research/raw/):
 twin=[2,8,35,205,1224,8169,58980,440312,3424506,27412679,224376048,1870585220,
 15834664872,135780321665,1177209242304,10304195697298,90948839353159,808675888577436,
 7237516880334496]  # A007508 n=1..19 (a19 added Jun 02 2026; independent verification requested Jun 17 2026)
