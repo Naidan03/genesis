@@ -25,14 +25,12 @@ python scripts/frontier_check.py
 
 `twin_frontier_forecast.py` runs the data and instrument validation gates, freezes the twin forecast on n ≤ 18, and reports the verdict on A007508(19) (−16.9σ). `cousin_frontier_forecast.py` validates an independent sieve against known terms (≈1 GB RAM), freezes the cousin forecast, and reports the verdict on A080840(19) (−17.28σ). `frontier_check.py` is an independent Simpson-quadrature cross-check of the residuals of both families.
 
-All calibration uses n ≤ 18 only; the disputed a(19) values are held out. Data provenance: OEIS pages for A007508, A080840 and A152051 fetched on 2026-07-02; raw HTML/text responses with HTTP headers and SHA256 checksums are preserved in `research/raw/`. Windowed spot checks use the [primesieve](https://github.com/kimwalisch/primesieve) 12.14 command-line binary (not bundled): the twin pair count over [10¹⁹ − 10⁹, 10¹⁹] is 690,217 (1.7 s on a desktop CPU) against a Hardy–Littlewood expectation of ≈689,800.
+All calibration uses n ≤ 18 only; the disputed a(19) values are held out. Data provenance: OEIS pages for A007508, A080840 and A152051 fetched on 2026-07-02; raw HTML/text responses with HTTP headers and SHA256 checksums are preserved in `research/raw/`. Windowed spot checks use the [primesieve](https://github.com/kimwalisch/primesieve) 12.14 command-line binary (not bundled): the twin pair count over [10¹⁹ − 10⁹, 10¹⁹] is 690,217, against a Hardy–Littlewood expectation of ≈689,800 — reproducible by anyone with the primesieve CLI.
 
 ## Repository map
 
 - `scripts/` — all analysis code
 - `research/raw/` — data provenance (raw fetches, HTTP headers, SHA256 checksums)
-
-A methodology paper describing the forecasting protocol is in preparation.
 
 ## License
 
